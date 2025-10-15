@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<style>
+  .tab { display: none; }
+  .tab-buttons button { margin-right: 5px; }
+</style>
+</head>
+<body>
+
+<div class="tab-buttons">
+  <button onclick="openTab('home')">Domov</button>
+  <button onclick="openTab('about')">O nas</button>
+  <button onclick="openTab('contact')">Kontakt</button>
+</div>
+
+<div id="home" class="tab">
+  <h2>Domov</h2>
+  <p>To je vsebina domače strani.</p>
+</div>
+
+<div id="about" class="tab">
+  <h2>O nas</h2>
+  <p>To je vsebina o nas.</p>
+</div>
+
+<div id="contact" class="tab">
+  <h2>Kontakt</h2>
+  <p>To je vsebina kontakt strani.</p>
+</div>
+
+<script>
+function openTab(tabId) {
+  // skrij vse
+  document.querySelectorAll('.tab').forEach(tab => tab.style.display = 'none');
+  // pokaži izbrano
+  document.getElementById(tabId).style.display = 'block';
+}
+
+// privzeto odpri Domov
+openTab('home');
+</script>
+
+</body>
+</html>
